@@ -2,12 +2,13 @@
 
 
 int main() {
-    char estado[2];           //definindo as variaveis
+    char estado[2];          //definindo as variaveis
     char codigo[15];
     char nome[30];
     int populacao, pontos_turisticos;
     float pib, area;
     float densidade, pib_per_capita;
+    float super_poder;
 
     printf("__Desafio Super Trunfo__ \n");
 
@@ -37,11 +38,11 @@ int main() {
 
     //calculando a densidade e pib per capita
     densidade = (float) populacao / area;
-    pib_per_capita = (float) pib / populacao;
+    pib_per_capita = (float) (pib * 10000000) / populacao;
 
 
     printf("Carta 01: \n");       //exibindo os dados da carta 1
-    printf("Estado: %s\n",estado);
+    printf("Estado: %s \n",estado);
     printf("Código da cidade: %s\n",codigo);
     printf("Nome da cidade: %s\n",nome);
     printf("População: %d\n",populacao);
@@ -79,7 +80,7 @@ int main() {
 
     //calculando a densidade e pib per capita
     densidade = (float) populacao / area;
-    pib_per_capita = (float) pib / populacao;
+    pib_per_capita = (float) (pib * 10000000) / populacao;
 
     printf("Carta 02: \n");       //exibindo os dados da carta 2
     printf("Estado: %s\n",estado);
