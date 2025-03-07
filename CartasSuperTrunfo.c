@@ -17,7 +17,7 @@ int main() {
     
 
     printf("Código da cidade: \n");           //socitando os dados das cartas para armazenar nas variaveis
-    scanf ("%s", &codigo);
+    scanf("%s", &codigo);
     
     printf("Estado: \n");
     scanf("%s", &estado);
@@ -62,6 +62,9 @@ int main() {
 
     printf("*Cadastrando a carta 2* \n");
     //definindo as variaveis da carta 2
+    char codigo2 [15];
+    char estado2;
+    char nome2 [30];
     unsigned int populacaoB;
     int pontos_turisticosB;
     float pibB, areaB;
@@ -71,13 +74,13 @@ int main() {
     
 
     printf("Código da cidade: \n");  //socitando os dados das cartas para armazenar nas variaveis
-    scanf ("%s", &codigo);
+    scanf ("%s", &codigo2);
     
     printf("Estado: \n");
-    scanf("%s", &estado);
+    scanf("%s", &estado2);
 
     printf("Nome da cidade: \n");
-    scanf("%s", &nome);
+    scanf("%s", &nome2);
 
     printf("População: \n");
     scanf("%u", &populacaoB);
@@ -100,9 +103,9 @@ int main() {
     super_poderB = (float) populacaoB + pontos_turisticosB + pibB + areaB + pib_per_capitaB + (1 / densidadeB);
 
     printf("Carta 02: \n");       //exibindo os dados da carta 2
-    printf("Estado: %s\n",estado);
-    printf("Código da cidade: %s\n",codigo);
-    printf("Nome da cidade: %s\n",nome);
+    printf("Estado: %s\n",estado2);
+    printf("Código da cidade: %s\n",codigo2);
+    printf("Nome da cidade: %s\n",nome2);
     printf("População: %d\n",populacaoB);
     printf("Área: %.2f km²\n",areaB);
     printf("PIB: %.2f bilhões de reais\n",pibB);
@@ -111,24 +114,34 @@ int main() {
     printf("PIB per capita: %.2f reais\n\n",pib_per_capitaB);
 
 
-    // comparando os atributos das cartas
-    int resultadoPopu = populacao > populacaoB;
+    // comparando os atributos das cartas (desafio 1)
+    /*int resultadoPopu = populacao > populacaoB;
     int resultadoArea = area > areaB;
     int resultadoPib = pib > pibB;
     int resultadoPontosTur = pontos_turisticos > pontos_turisticosB;
     int resultadoDens = densidade > densidadeB;
     int resultadoPibPerC = pib_per_capita > pib_per_capitaB;
-    int resultadoSuperPoder = super_poderA > super_poderB;
+    int resultadoSuperPoder = super_poderA > super_poderB;*/
 
-    // exibindo resultados da carta vencedora
-    printf(" __Comparação das cartas__\n");
+    // exibindo resultados da carta vencedora (desafio 1)
+    /*printf(" __Comparação das cartas__\n");
     printf("População: %d \n",resultadoPopu);
     printf("Área: %d \n", resultadoArea);
     printf("PIB: %d \n", resultadoPib);
     printf("Pontos Turísticos: %d \n", resultadoPontosTur);
     printf("Densidade: %d \n", resultadoDens);
     printf("PIB per capita: %d \n", resultadoPibPerC);
-    printf("Super Poder: %d \n", resultadoSuperPoder);
+    printf("Super Poder: %d \n", resultadoSuperPoder);*/
+
+    if (populacao > populacaoB){
+        printf("População: %s venceu!\n",nome);
+        if (populacao == populacaoB){
+            printf("População: Deu empate.\n");
+        }
+    } else{
+        printf("População: %s venceu!\n",nome2);
+    }
+
 
 
 
