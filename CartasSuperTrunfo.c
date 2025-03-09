@@ -63,7 +63,7 @@ int main() {
     printf("*Cadastrando a carta 2* \n");
     //definindo as variaveis da carta 2
     char codigo2 [15];
-    char estado2;
+    char estado2 [5];
     char nome2 [30];
     unsigned int populacaoB;
     int pontos_turisticosB;
@@ -132,6 +132,34 @@ int main() {
     printf("Densidade: %d \n", resultadoDens);
     printf("PIB per capita: %d \n", resultadoPibPerC);
     printf("Super Poder: %d \n", resultadoSuperPoder);*/
+
+    int menu;
+
+    printf("### Hora de Comparar ###\n");
+    printf("%s vs %s \n",nome,nome2);
+    printf("Escolha qual atrubuto deseja comparar:\n");
+    printf("1 População:\n");
+    printf("2 Área:\n");
+    printf("3 PIB:\n");
+    printf("4 Pontos turísticos:\n");
+    printf("5 Densidade:\n");
+    printf("6 PIB per capita:\n");
+    printf("7 Super poder:\n");
+
+    scanf("%d", &menu);
+
+
+    switch (menu)
+    {
+    case 1:
+        printf("População de %s vs População de %s\n",nome,nome2);
+
+        break;
+    
+    default:
+        break;
+    }
+
 
     if (populacao > populacaoB){
         printf("População: %s venceu!\n",nome);
