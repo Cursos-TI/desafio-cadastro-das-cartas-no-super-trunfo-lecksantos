@@ -144,8 +144,9 @@ int main() {
     printf("4 Pontos turísticos:\n");
     printf("5 Densidade:\n");
     printf("6 PIB per capita:\n");
-    printf("7 Super poder:\n");
+    printf("7 Super poder:\n\n");
 
+    printf(":");
     scanf("%d", &menu);
 
 
