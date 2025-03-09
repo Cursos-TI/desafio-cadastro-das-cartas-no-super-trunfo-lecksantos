@@ -133,7 +133,7 @@ int main() {
     printf("PIB per capita: %d \n", resultadoPibPerC);
     printf("Super Poder: %d \n", resultadoSuperPoder);*/
 
-    int opcao;
+    int opcao; //menu switch
 
     printf("### Hora de Comparar ###\n");
     printf("%s vs %s \n",nome,nome2);
@@ -150,34 +150,19 @@ int main() {
     switch (opcao){
     case 1:
         printf("%s: %u de habitantes vs %s: %u de habitantes\n",nome,populacao,nome2,populacaoB);
-        if (populacao > populacaoB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("% Venceu!",nome2);
-        }
+        populacao > populacaoB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2); //operador ternário
 
         break;
 
     case 2:
         printf("%s: %.2f km² vs %s: %.2f km²\n");
-        if (area > areaB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("%s Venceu!",nome2);
-        }
+        area > areaB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2);
 
         break;
 
     case 3:
         printf("PIB de %s: %.2f Bilhões de reais vs PIB de %s: %.2f Bilhões de reais\n",nome,pib,nome2,pibB);
-        if (pib > pibB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("%s Venceu!",nome2);
-        }
+        pib > pibB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2);
 
         break;
 
@@ -196,50 +181,25 @@ int main() {
 
     case 5:
         printf("Densidade populacional de %s: %.2f hab/km² vs Densidade populacional de %s: %.2f hab/km²\n",nome,densidade,nome2,densidadeB);
-        if (densidade < densidadeB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("%s Venceu!",nome2);
-        }
-        
+        densidade < densidadeB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2);
+
         break;
 
     case 6:
         printf("PIB per capita: %s: %.2f reais vs %s: %.2f reais\n",nome,pib_per_capita,nome2,pib_per_capitaB);
-        if (pib_per_capita > pib_per_capitaB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("%s Venceu!",nome2);
-        }
+        pib_per_capita > pib_per_capitaB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2);
         
         break;
 
     case 7:
         printf("Super poder: %s: %.2f vs %s: %.2f",nome,super_poderA,nome2,super_poderB);
-        if (super_poderA > super_poderB)
-        {
-            printf("%s Venceu!",nome);
-        }else{
-            printf("%s Venceu!",nome2);
-        }
+        super_poderA > super_poderB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2);
         
         break;                       
     
     default:
         printf("Opcão invalida");
     }
-
-    /*if (populacao > populacaoB){
-        printf("População: %s venceu!\n",nome);
-        if (populacao == populacaoB){
-            printf("População: Deu empate.\n");
-        }
-    } if else{
-        printf("População: %s venceu!\n",nome2);
-    }*/
-
 
 
 
