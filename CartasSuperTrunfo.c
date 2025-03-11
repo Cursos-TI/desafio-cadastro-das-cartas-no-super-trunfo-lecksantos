@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+void opcao(){
+    printf("1 População:\n");
+    printf("2 Área:\n");
+    printf("3 PIB:\n");
+    printf("4 Pontos turísticos:\n");
+    printf("5 Densidade:\n");
+    printf("6 PIB per capita:\n");
+    printf("7 Super poder:\n");
+}
+
 
 int main() {
     char estado[2];          //definindo as variaveis da carta 1
@@ -133,21 +143,35 @@ int main() {
     printf("PIB per capita: %d \n", resultadoPibPerC);
     printf("Super Poder: %d \n", resultadoSuperPoder);*/
 
-    int opcao; //menu switch
+    int opcao1, opcao2, opcao3, opcao4, opcao5; //menu switch
 
     printf("### Hora de Comparar ###\n");
     printf("%s vs %s \n",nome,nome2);
-    printf("1 População:\n");
-    printf("2 Área:\n");
-    printf("3 PIB:\n");
-    printf("4 Pontos turísticos:\n");
-    printf("5 Densidade:\n");
-    printf("6 PIB per capita:\n");
-    printf("7 Super poder:\n\n");
-    printf("Escolha qual atrubuto deseja comparar: ");
-    scanf("%d", &opcao);
+    opcao();
+    printf("Escolha qual atrubuto deseja comparar:");
+    scanf("%d", &opcao1);
+    printf("Deseja escolher mais um? :\n");
+    opcao();
+    printf("8 comparar apenas 1 atributo.\n");
+    scanf("%d", &opcao2);
 
-    switch (opcao){
+    float comparacao1, comparacao2;
+
+    if (opcao1 == 1 && opcao2 == 2)
+    {comparacao1 = (float) populacao + area && comparacao2 = (float) populacaoB + areaB;
+        if (comparacao1 > comparacao2)
+        {
+            printf("%s Venceu!",nome);
+        }else{
+            printf("%s Venceu!",nome2);
+        }
+        
+        
+    }
+    
+
+
+    /*switch (opcao1,opcao2,opcao3,opcao4,opcao5){
     case 1:
         printf("%s: %u de habitantes vs %s: %u de habitantes\n",nome,populacao,nome2,populacaoB);
         populacao > populacaoB ? printf("%s Venceu!",nome) : printf("%s Venceu!",nome2); //operador ternário
@@ -199,7 +223,7 @@ int main() {
     
     default:
         printf("Opcão invalida");
-    }
+    }*/
 
 
 
