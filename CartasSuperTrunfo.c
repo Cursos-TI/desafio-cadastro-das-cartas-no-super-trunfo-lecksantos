@@ -214,12 +214,9 @@ int main() {
     opcao();
     scanf("%d", &opcao3);
 
-    if (opcao1 == opcao3){
-        printf("Você já escolheu esse atributo");
-    }else if (opcao2 == opcao3)
-        {
-            printf("Você já escolheu esse atributo");
-        }else{
+    if (opcao3 == opcao1 || opcao2){
+        printf("Você já escolheu esse atributo\n");
+    }else{
         switch (opcao3)
         {
             case 1:
@@ -261,12 +258,8 @@ int main() {
     opcao();
     scanf("%d", &opcao4);
 
-    if (opcao1 == opcao4){
-        printf("Você já escolheu esse atributo");
-    }else if (opcao2 == opcao4){
-        printf("Você já escolheu esse atributo");
-    }else if (opcao3 == opcao4){
-        printf("Você já escolheu esse atributo");
+    if (opcao4 == opcao1 || opcao2 || opcao3){
+        printf("Você já escolheu esse atributo\n");
     }else
     {
         switch (opcao4)
