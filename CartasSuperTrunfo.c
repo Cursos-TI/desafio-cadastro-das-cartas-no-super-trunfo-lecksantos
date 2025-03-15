@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//função menu
 void opcao(){
     printf("1 População:\n");
     printf("2 Área:\n");
@@ -13,7 +14,7 @@ void opcao(){
 
 int main() {
     char estado[2];          //definindo as variaveis da carta 1
-    char codigo[15];
+    char codigo[30];
     char nome[30];
     unsigned int populacao;
     int pontos_turisticos;
@@ -124,7 +125,7 @@ int main() {
     printf("PIB per capita: %.2f reais\n\n",pib_per_capitaB);
 
 
-    int opcao1, opcao2, opcao3,opcao4, resultado1, resultado2, resultado3, resultado4; //menu switch
+    int opcao1, opcao2, resultado1, resultado2; //menu switch
 
     printf("### Hora de Comparar ###\n");
     printf("%s vs %s \n",nome,nome2);
@@ -136,30 +137,37 @@ int main() {
     {
     case 1:
         printf("Você escolheu o atributo população.\n");
+        printf("População de %s: %u vs População de %s: %u\n", nome, populacao, nome2, populacaoB);
         resultado1 = populacao > populacaoB ? 1 : 0;
         break;
     case 2:
         printf("Você escolheu o atributo área.\n");
+        printf("Área de %s: %.2f km² vs Área de %s: %.2f km²\n", nome, area, nome2, areaB);
         resultado1 = area > areaB ? 1 : 0;
         break;
     case 3:
         printf("Você escolheu o atributo PIB.\n");
+        printf("PIB de %s: R$ %.2f bilhões vs PIB de %s: R$ %.2f bilhões\n", nome, pib, nome2, pibB);
         resultado1 = pib > pibB ? 1 : 0;
         break;
     case 4:
         printf("Você escolheu o atributo pontos turísticos.\n");
+        printf("Pontos turísticos de %s: %d vs Pontos turísticos de %s: %d\n", nome, pontos_turisticos, nome2, pontos_turisticosB);
         resultado1 = pontos_turisticos > pontos_turisticosB ? 1 : 0;
         break;
     case 5:
         printf("Você escolheu o atributo densidade.\n");
+        printf("Densidade populacional de %s: %.2f hab/km² vs Densidade populacional de %s: %.2f hab/km²\n", nome, densidade, nome2, densidadeB);
         resultado1 = densidade < densidadeB ? 1 : 0;
         break;
     case 6:
         printf("Você escolheu o atributo PIB per capita.\n");
+        printf("PIB per capita de %s: %.2f reais vs PIB per capita de %s: %.2f reais\n", nome, pib_per_capita, nome2, pib_per_capitaB);
         resultado1 = pib_per_capita > pib_per_capitaB ? 1 : 0;
         break;
     case 7:
         printf("Você escolheu o atributo super poder.\n");
+        printf("Super poder de %s: %.2f vs Super poder de %s: %.2f\n", nome, super_poderA, nome2, super_poderB);
         resultado1 = super_poderA > super_poderB ? 1 : 0;
         break;
 
@@ -168,7 +176,7 @@ int main() {
         break;
     }
 
-    printf("Escolha mais um atributo? :\n");
+    printf("Escolha mais um atributo:\n");
     opcao();
     scanf("%d", &opcao2);
 
@@ -178,30 +186,37 @@ int main() {
         switch (opcao2){
         case 1:
         printf("Você escolheu o atributo população.\n");
+        printf("População de %s: %u vs População de %s: %u\n", nome, populacao, nome2, populacaoB);
         resultado2 = populacao > populacaoB ? 1 : 0;
         break;
     case 2:
         printf("Você escolheu o atributo área.\n");
+        printf("Área de %s: %.2f km² vs Área de %s: %.2f km²\n", nome, area, nome2, areaB);
         resultado2 = area > areaB ? 1 : 0;
         break;
     case 3:
         printf("Você escolheu o atributo PIB.\n");
+        printf("PIB de %s: R$ %.2f bilhões vs PIB de %s: R$ %.2f bilhões\n", nome, pib, nome2, pibB);
         resultado2 = pib > pibB ? 1 : 0;
         break;
     case 4:
         printf("Você escolheu o atributo pontos turísticos.\n");
+        printf("Pontos turísticos de %s: %d vs Pontos turísticos de %s: %d\n", nome, pontos_turisticos, nome2, pontos_turisticosB);
         resultado2 = pontos_turisticos > pontos_turisticosB ? 1 : 0;
         break;
     case 5:
         printf("Você escolheu o atributo densidade.\n");
+        printf("Densidade populacional de %s: %.2f hab/km² vs Densidade populacional de %s: %.2f hab/km²\n", nome, densidade, nome2, densidadeB);
         resultado2 = densidade < densidadeB ? 1 : 0;
         break;
     case 6:
         printf("Você escolheu o atributo PIB per capita.\n");
+        printf("PIB per capita de %s: %.2f reais vs PIB per capita de %s: %.2f reais\n", nome, pib_per_capita, nome2, pib_per_capitaB);
         resultado2 = pib_per_capita > pib_per_capitaB ? 1 : 0;
         break;
     case 7:
         printf("Você escolheu o atributo super poder.\n");
+        printf("Super poder de %s: %.2f vs Super poder de %s: %.2f\n", nome, super_poderA, nome2, super_poderB);
         resultado2 = super_poderA > super_poderB ? 1 : 0;
         break;
 
@@ -210,93 +225,15 @@ int main() {
         break;
     }}
 
-    printf("Escolha outro atributo:\n");
-    opcao();
-    scanf("%d", &opcao3);
-
-    if (opcao3 == opcao1 || opcao2){
-        printf("Você já escolheu esse atributo\n");
-    }else{
-        switch (opcao3)
-        {
-            case 1:
-            printf("Você escolheu o atributo população.\n");
-            resultado3 = populacao > populacaoB ? 1 : 0;
-            break;
-        case 2:
-            printf("Você escolheu o atributo área.\n");
-            resultado3 = area > areaB ? 1 : 0;
-            break;
-        case 3:
-            printf("Você escolheu o atributo PIB.\n");
-            resultado3 = pib > pibB ? 1 : 0;
-            break;
-        case 4:
-            printf("Você escolheu o atributo pontos turísticos.\n");
-            resultado3 = pontos_turisticos > pontos_turisticosB ? 1 : 0;
-            break;
-        case 5:
-            printf("Você escolheu o atributo densidade.\n");
-            resultado3 = densidade < densidadeB ? 1 : 0;
-            break;
-        case 6:
-            printf("Você escolheu o atributo PIB per capita.\n");
-            resultado3 = pib_per_capita > pib_per_capitaB ? 1 : 0;
-            break;
-        case 7:
-            printf("Você escolheu o atributo super poder.\n");
-            resultado3 = super_poderA > super_poderB ? 1 : 0;
-            break;
-    
-        default:
-            printf("Atributo inválido.\n");
-            break;
-        }
-    }
-
-    printf("Escolhe outro atributo:\n");
-    opcao();
-    scanf("%d", &opcao4);
-
-    if (opcao4 == opcao1 || opcao2 || opcao3){
-        printf("Você já escolheu esse atributo\n");
+    if (resultado1 && resultado2){
+        printf("%s Venceu!\n",nome);
+    }else if (resultado1 != resultado2)
+    {
+        printf("A rodada empatou!\n");
     }else
     {
-        switch (opcao4)
-        {
-            case 1:
-            printf("Você escolheu o atributo população.\n");
-            resultado4 = populacao > populacaoB ? 1 : 0;
-            break;
-        case 2:
-            printf("Você escolheu o atributo área.\n");
-            resultado4 = area > areaB ? 1 : 0;
-            break;
-        case 3:
-            printf("Você escolheu o atributo PIB.\n");
-            resultado4 = pib > pibB ? 1 : 0;
-            break;
-        case 4:
-            printf("Você escolheu o atributo pontos turísticos.\n");
-            resultado4 = pontos_turisticos > pontos_turisticosB ? 1 : 0;
-            break;
-        case 5:
-            printf("Você escolheu o atributo densidade.\n");
-            resultado4 = densidade < densidadeB ? 1 : 0;
-            break;
-        case 6:
-            printf("Você escolheu o atributo PIB per capita.\n");
-            resultado4 = pib_per_capita > pib_per_capitaB ? 1 : 0;
-            break;
-        case 7:
-            printf("Você escolheu o atributo super poder.\n");
-            resultado4 = super_poderA > super_poderB ? 1 : 0;
-            break;
-    
-        default:
-            printf("Atributo inválido.\n");
-            break;
-    }}
+        printf("%s Venceu!\n",nome2);
+    }
     
 
 
@@ -309,5 +246,5 @@ int main() {
 
 
 
-return 0;
+    return 0;
 }
