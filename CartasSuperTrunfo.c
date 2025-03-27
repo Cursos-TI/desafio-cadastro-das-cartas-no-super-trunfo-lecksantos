@@ -13,9 +13,9 @@ void opcao(){
 
 
 int main() {
-    char estado[2];          //definindo as variaveis da carta 1
-    char codigo[30];
-    char nome[30];
+    char * estado[2];          //definindo as variaveis da carta 1
+    char * codigo[30];
+    char * nome[30];
     unsigned int populacao;
     int pontos_turisticos;
     float pib, area;
@@ -73,9 +73,9 @@ int main() {
 
     printf("*Cadastrando a carta 2* \n");
     //definindo as variaveis da carta 2
-    char codigo2 [15];
-    char estado2 [5];
-    char nome2 [30];
+    char * codigo2 [15];
+    char * estado2 [5];
+    char * nome2 [30];
     unsigned int populacaoB;
     int pontos_turisticosB;
     float pibB, areaB;
@@ -234,17 +234,7 @@ int main() {
     {
         printf("%s Venceu!\n",nome2);
     }
-    
-
-
-
 
     
-
-
-
-
-
-
     return 0;
 }
